@@ -65,11 +65,11 @@ void draw()
     for (int i=0; i< width+2; i++)
         cout<< "#";
     cout<< endl;
-    cout<< "SCOORE :"<<score<< endl;
+    cout<< "SCOORE :"<<score<< endl;// Score of the game
 }
 void input()
 {
-    if(_kbhit())
+    if(_kbhit())// this function is derived from the libary <conio.h> to read keyboard inputs
     {
         switch(_getch())
         {
@@ -133,7 +133,7 @@ void logic()
      {
 
         score += 100;
-        fruitx =rand()% width;
+        fruitx =rand()% width;// randomising the position of the fruit.
         fruity =rand()% height;
         ntail++;
 
@@ -150,7 +150,7 @@ int main()
         draw();
         input();
         logic();
-        Sleep(10);
+        Sleep(10);// sleeep function slows down the game the higher the number in the function
     }
     return 0;
 
